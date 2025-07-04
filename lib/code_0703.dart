@@ -50,12 +50,7 @@ void main() {
   // print(reverse1(before));
   // print(before);
   // 방법 3 : 기존 리스트에서 리스트의 길이의 반만 반복하면서 끝값과 첫값 바꿔주기
-  int half = before.length ~/ 2;
-  for (var i = 0; i < half; i++) {
-    int temp = before[before.length - 1 - i];
-    before[before.length - 1 - i] = before[i];
-    before[i] = temp;
-  }
+  print(reverse2(before));
   print(before);
 }
 
@@ -66,3 +61,12 @@ void main() {
 //   }
 //   return result2;
 // }
+
+reverse2(List<int> list) {
+  int half = list.length ~/ 2;
+  for (var i = 0; i < half; i++) {
+    int temp = list[list.length - 1 - i];
+    list[list.length - 1 - i] = list[i];
+    list[i] = temp;
+  }
+}
