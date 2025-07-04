@@ -16,20 +16,29 @@
 /// [2] 가우스 방법
 /// 1~100 => (100 * 100 + 1)) / 2
 /// 1, 2, 3, 4, 5 ... 100;
-void main() {
-int result = getSum(10000);
-print(result);
-}
 
-int getSum(int num) {
-int num = 10000;
-int sum = (num * (num + 1)) ~/2;
-return sum;
-}
+// void main() {
+//   int result = getSum(10000);
+//   print(result);
+// }
 
+// int getSum(int num) {
+//   int num = 10000;
+//   int sum = (num * (num + 1)) ~/ 2;
+//   return sum;
+// }
 
 // [2] 리스트 뒤집기
 //     [1, 2, 3, 4, 5] => [5, 4, 3, 2, 1]
-// List<int> before = [1, 2, 3, 4, 5];
-//     final result = before.reversed.toList();
-///    print(result);
+void main() {
+  List<int> before = [1, 2, 3, 4, 5];
+
+// 방법 1: `List`가 가지고 있는 `reversed` 메서드 사용
+  final result1 = before.reversed.toList();
+  print(result1);
+  print(before);
+}
+
+// [2] 리스트 뒤집기
+//     [1, 2, 3, 4, 5] => [5, 4, 3, 2, 1]
+// 방법 1: `List`가 가지고 있는 `reversed` 메서드 사용
