@@ -30,15 +30,21 @@
 
 // [2] 리스트 뒤집기
 //     [1, 2, 3, 4, 5] => [5, 4, 3, 2, 1]
+// void main() {
+//   List<int> before = [1, 2, 3, 4, 5];
+
+// // 방법 1: `List`가 가지고 있는 `reversed` 메서드 사용
+//   final result1 = before.reversed.toList();
+//   print(result1);
+//   print(before);
+// }
+
+// 방법 2 : 새로운 리스트 만들어서 `List`의 길이만큼 반복하면서 반대 값 넣어주기
 void main() {
   List<int> before = [1, 2, 3, 4, 5];
-
-// 방법 1: `List`가 가지고 있는 `reversed` 메서드 사용
-  final result1 = before.reversed.toList();
-  print(result1);
-  print(before);
+  List<int> result2 = [];
+  for (var i = 0; i < before.length; i++) {
+    result2.add(before[before.length - 1 - i]);
+  }
+  print(result2);
 }
-
-// [2] 리스트 뒤집기
-//     [1, 2, 3, 4, 5] => [5, 4, 3, 2, 1]
-// 방법 1: `List`가 가지고 있는 `reversed` 메서드 사용
