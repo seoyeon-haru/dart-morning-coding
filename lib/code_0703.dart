@@ -17,10 +17,15 @@
 /// 1~100 => (100 * 100 + 1)) / 2
 /// 1, 2, 3, 4, 5 ... 100;
 void main() {
+int result = getSum(10000);
+print(result);
+}
+
+int getSum(int num) {
 int num = 10000;
 int sum = (num * (num + 1)) ~/2;
-print(sum);
-} 
+return sum;
+}
 
 
 // [2] 리스트 뒤집기
